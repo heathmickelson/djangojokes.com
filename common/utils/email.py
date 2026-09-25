@@ -1,4 +1,5 @@
 import sendgrid
+import os
 from sendgrid.helpers.mail import Mail
 
 from django.conf import settings
@@ -7,7 +8,7 @@ from django.conf import settings
 def send_email(to, subject, content, sender='admin@example.com'):
     sg = sendgrid.SendGridAPIClient(settings.SENDGRID_API_KEY)
     if (len(str(sg)) > 3):
-        print('SG is above 3 chars and starts with: ' , str(sg)[:3])
+        print('SG is above 3 chars and starts with: ' , str(sg))
     else:
         print('SG is not above 3 chars')
     mail = Mail(
