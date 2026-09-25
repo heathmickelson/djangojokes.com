@@ -39,6 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.admindocs',
 
+    # Third Party
+    'crispy_forms',
+    'crispy_bootstrap5',
+
     # Local apps
     'common.apps.CommonConfig',
     'jobs.apps.JobsConfig',
@@ -46,6 +50,10 @@ INSTALLED_APPS = [
     'jokes.apps.JokesConfig',
     'users.apps.UsersConfig',
 ]
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
